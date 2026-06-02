@@ -7,3 +7,13 @@ body{
   background:#0f172a;
   color:white;
 }
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.typing-dot {
+  animation: blink 1s infinite;
+}
