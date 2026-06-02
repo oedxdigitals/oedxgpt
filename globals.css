@@ -17,3 +17,20 @@ body{
 .typing-dot {
   animation: blink 1s infinite;
 }
+
+/* Chat spacing polish */
+.prose pre {
+  background: #0d0d0d !important;
+  border-radius: 10px;
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.prose code {
+  font-size: 0.85rem;
+}
+
+/* Smooth chat feel */
+* {
+  scroll-behavior: smooth;
+}
