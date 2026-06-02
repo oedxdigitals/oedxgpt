@@ -7,18 +7,18 @@ datasource db {
 }
 
 model Chat {
-  id    String @id @default(cuid())
-  title String
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  messages Message[]
+  id        String    @id @default(cuid())
+  title     String?
+  sessionId String
+  createdAt DateTime  @default(now())
+  messages  Message[]
 }
 
 model Message {
-  id String @id @default(cuid())
-
-  chatId String
-  chat   Chat   @relation(fields: [chatId], references: [id], onDelete: Cascade)
+  id        String   @id @default(cuid())
+  role      String   // "user" | "assistant"
+  content   String
+  chatId    String
+  chat      Chat     @relation(fields: [chatId], references: [id])
+  createdAt DateTime @default(now())
 }
