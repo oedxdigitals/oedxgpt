@@ -1,0 +1,9 @@
+:root{
+  --oedx-primary:#2563eb;
+  --oedx-dark:#0f172a;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+}
